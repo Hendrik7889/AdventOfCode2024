@@ -8,7 +8,8 @@ import java.util.regex.Pattern;
 
 public class Star5 {
     public static void main(String[] args) {
-        String filePath = "src/day3/input.txt";
+        String filePath = "src\\day3\\input.txt";
+
         int multiplications = 0;
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath));

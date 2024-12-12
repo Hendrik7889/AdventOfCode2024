@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Star22 {
     public static void main(String[] args) {
-        String filePath = "src/day11/input.txt";
+        String filePath = "src\\day11\\input.txt";
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath));

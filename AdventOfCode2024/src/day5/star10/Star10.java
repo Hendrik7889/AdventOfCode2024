@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 
 public class Star10 {
     public static void main(String[] args) {
-        String filePath = "src/day5/map.txt";
+        String filePath = "src\\day5\\map.txt";
+
         ArrayList<int[]> productionRules = new ArrayList<>();
         ArrayList<ArrayList<Integer>> pagesToBeUpdated = new ArrayList<>();
 

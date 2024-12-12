@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class Star21 {
     public static void main(String[] args) {
-        String filePath = "src/day11/input.txt";
+        String filePath = "src\\day11\\input.txt";
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath));

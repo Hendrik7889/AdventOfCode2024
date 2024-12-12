@@ -8,9 +8,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Star3 {
-
     public static void main(String[] args) {
-        String filePath = "src/day2/ListOfLists.txt";
+        String filePath = "src\\day2\\ListOfLists.txt";
 
         List<List<Integer>> mainList = new ArrayList<>();
 

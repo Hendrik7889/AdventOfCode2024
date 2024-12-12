@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Star23 {
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\HendrikBru\\Documents\\GitHub\\AdventOfCode2024\\AdventOfCode2024\\src\\day12\\map.txt";
+        String filePath = "src\\day12\\map.txt";
 
         ArrayList<ArrayList<Character>> map = new ArrayList<>();
 
@@ -29,7 +29,6 @@ public class Star23 {
                     //found characters will be set to lowercase
                     if ( Character.isUpperCase(map.get(i).get(j))) {
                         int[] result = recursiveSearch(map, i, j, map.get(i).get(j));
-                        System.out.println("Found tiles: " + result[0] + " and walls: " + result[1]);
                         price += result[0] * result[1];
                     }
                 }

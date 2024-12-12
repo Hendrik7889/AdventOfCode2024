@@ -9,7 +9,8 @@ import java.util.stream.Collectors;
 
 public class Star13 {
     public static void main(String[] args) {
-        String filePath = "src/day7/map.txt";
+        String filePath = "src\\day7\\map.txt";
+
         ArrayList<Long> results = new ArrayList<>();
         ArrayList<ArrayList<Long>> numbers = new ArrayList<>();
 

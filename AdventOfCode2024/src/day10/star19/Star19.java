@@ -9,7 +9,7 @@ import java.util.Collection;
 
 public class Star19 {
     public static void main(String[] args) {
-        String filePath = "src/day10/map.txt";
+        String filePath = "src\\day10\\map.txt";
 
         ArrayList<ArrayList<Integer>> map = new ArrayList<>();
 

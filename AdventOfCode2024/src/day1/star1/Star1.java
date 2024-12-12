@@ -9,7 +9,6 @@ import java.util.List;
 import static java.util.Collections.sort;
 
 public class Star1 {
-
     public static void main(String[] args) {
         String filePath = "src\\day1\\table.txt";
 

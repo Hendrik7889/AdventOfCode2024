@@ -9,7 +9,8 @@ import java.util.List;
 
 public class Star9 {
     public static void main(String[] args) {
-        String filePath = "src/day5/map.txt";
+        String filePath = "src\\day5\\map.txt";
+
         List<int[]> productionRules = new ArrayList<>();
         List<List<Integer>> pagesToBeUpdated = new ArrayList<>();
 

@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class Star15 {
     public static void main(String[] args) {
-        String filePath = "src/day8/map.txt";
+        String filePath = "src\\day8\\map.txt";
 
         ArrayList<ArrayList<Character>> map = new ArrayList<>();
 

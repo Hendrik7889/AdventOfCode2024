@@ -8,8 +8,10 @@ import java.util.List;
 
 public class Star8 {
     public static void main(String[] args) {
+        String filePath = "src\\day4\\map.txt";
+
         List<List<Character>> mainList = new ArrayList<>();
-        String filePath = "src/day4/map.txt";
+
         try{
             BufferedReader br = new BufferedReader(new FileReader(filePath));
             String line;
