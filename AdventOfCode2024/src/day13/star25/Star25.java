@@ -9,7 +9,6 @@ import java.util.regex.Pattern;
 
 public class Star25 {
     public static void main(String[] args) {
-
         String filePath = "src\\day13\\input.txt";
 
         ArrayList<long[]> buttonA = new ArrayList<>();
