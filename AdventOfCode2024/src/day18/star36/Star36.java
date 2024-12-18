@@ -12,7 +12,7 @@ public class Star36 {
 
         int xSize = 71; // The size of the X-axis. Distance from the left
         int ySize = 71; // The size of the Y-axis. Distance from the top
-        ArrayList<ArrayList<Tile>> map = new ArrayList<>();
+        ArrayList<ArrayList<Tile>> map;
         int numberOfBytesFallen = 1024; // number to start the bytes falling
         ArrayList<Tile> nextNeighbour = new ArrayList<>(); // List of tiles that are found but not confirmed as the optimal path yet
         ArrayList<int[]> positions = new ArrayList<>(); // List of positions on the current route
@@ -21,8 +21,8 @@ public class Star36 {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
             String line;
             while ((line = br.readLine()) != null && !line.isEmpty()) {
-                int x = Integer.valueOf(line.split(",")[0]);
-                int y = Integer.valueOf(line.split(",")[1]);
+                int x = Integer.parseInt(line.split(",")[0]);
+                int y = Integer.parseInt(line.split(",")[1]);
                 int[] newInt = {x, y};
                 positions.add(newInt);
             }
@@ -30,7 +30,7 @@ public class Star36 {
             System.out.println("Error reading the file: " + e.getMessage());
         }
 
-        //region build the map and set all to tiles
+        //region Build the map and set all to tiles
         map = new ArrayList<>();
         for (int i = 0; i < xSize; i++) {
             ArrayList<Tile> list = new ArrayList<>();
@@ -48,7 +48,6 @@ public class Star36 {
 
         //endregion
         int[] lastHit = null;                   // The last hit position
-        boolean reachedFinish = true;           // If the finish is reached
         int additionalBytesFallen = numberOfBytesFallen;
         while (true) {
             map.get(0).set(0, new Path(0, 0, 0));
@@ -75,7 +74,7 @@ public class Star36 {
                     }
                 }
 
-                //the smallest tile is set to visited
+                //the smallest tile var visited is set to true
                 Path path = (Path) nextNeighbour.get(smallest);
                 nextNeighbour.remove(smallest);
                 if (map.get(path.y).get(path.x) instanceof Finish) {
@@ -87,8 +86,8 @@ public class Star36 {
                 updateNeighbourList(map, nextNeighbour, path.y, path.x);
             }
 
-            //Here, if a path is found to the Finish Tile
-            //get the path from the finish to the start
+            //Execute here if a path is found to the Finish Tile.
+            //Get the path from the finish to the start
             ArrayList<Tile> path = getPathFromFinishToStart(map, xSize, ySize);
             //add the additional bytes fallen until the path is blocked
             boolean hit = false;
