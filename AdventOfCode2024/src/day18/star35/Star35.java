@@ -10,8 +10,8 @@ public class Star35 {
     public static void main(String[] args) {
         String filePath = "src\\day18\\input.txt";
 
-        int xSize = 71; // The size of the x axis. Distance from the left
-        int ySize = 71; // The size of the y axis. Distance from the top
+        int xSize = 71; // The size of the X-axis. Distance from the left
+        int ySize = 71; // The size of the Y-axis. Distance from the top
         ArrayList<ArrayList<Tile>> map = new ArrayList<>();
         int numberOfBytesFallen = 1024;
         ArrayList<Tile> nextNeighbour = new ArrayList<>(); // List of tiles that are found but not confirmed as the optimal path yet
@@ -21,8 +21,8 @@ public class Star35 {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
             String line;
             while ((line = br.readLine()) != null && !line.isEmpty()) {
-                int x = Integer.valueOf(line.split(",")[0]);
-                int y = Integer.valueOf(line.split(",")[1]);
+                int x = Integer.parseInt(line.split(",")[0]);
+                int y = Integer.parseInt(line.split(",")[1]);
                 int[] newInt = {x,y};
                 positions.add(newInt);
             }
@@ -67,7 +67,7 @@ public class Star35 {
                 }
             }
 
-            //the smallest tile is set to visited
+            //the smallest tile var visited is set to true
             Path path = (Path) nextNeighbour.get(smallest);
             nextNeighbour.remove(smallest);
             if(map.get(path.y).get(path.x) instanceof Finish) {
@@ -97,9 +97,9 @@ public class Star35 {
                     } else {
                         System.out.print(".");
                     }
-                } else if(map.get(i).get(j) instanceof Wall wall) {
+                } else if(map.get(i).get(j) instanceof Wall) {
                     System.out.print("#");
-                } else if(map.get(i).get(j) instanceof Finish finish) {
+                } else if(map.get(i).get(j) instanceof Finish) {
                     System.out.print("E");
                 }
             }
