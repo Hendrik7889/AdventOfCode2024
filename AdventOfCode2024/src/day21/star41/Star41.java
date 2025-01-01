@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Star41 {
-    public static void main(String[] args) {170279148659464
+    public static void main(String[] args) {
         Map<String, List<String>> moves1;
         Map<String, List<String>> moves2;
 
