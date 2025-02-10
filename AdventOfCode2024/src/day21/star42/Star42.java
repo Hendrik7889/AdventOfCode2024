@@ -13,7 +13,7 @@ public class Star42 {
     private Map<String, Long> memo;
 
     public static void main(String[] args) {
-        String filePath = "AdventOfCode2024/src/day21/input.txt";
+        String filePath = "src/day21/input.txt";
 
         ArrayList<String> codes = new ArrayList<>();
         String[] keypad1 = {"789", "456", "123", "#0A"};
@@ -46,7 +46,7 @@ public class Star42 {
 
     public Map<String, List<String>> parseMoves(String[] keypad) {
         Map<String, int[]> pos = getKeyPos(keypad);
-        List<String> keys = pos.keySet().stream().sorted().collect(Collectors.toList());
+        List<String> keys = pos.keySet().stream().sorted().toList();
 
         Map<String, List<String>> moves = new HashMap<>();
         for (String key1 : keys) {
